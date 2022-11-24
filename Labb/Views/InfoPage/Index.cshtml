@@ -1,0 +1,8 @@
+﻿@using EPiServer.Web.Mvc.Html
+
+@model Labb.Models.ViewModels.DefaultPageViewModel<Labb.Models.Pages.InfoPage>
+
+<h1>@Html.PropertyFor(m => m.CurrentPage.Header) </h1>
+<div>
+  @Html.PropertyFor(m => m.CurrentPage.MainBody)
+</div> 

@@ -1,15 +1,17 @@
-﻿<!DOCTYPE html>
+﻿@model Labb.Models.ViewModels.IPageViewModel<EPiServer.Core.PageData>
+
+<!DOCTYPE html>
 
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>@ViewBag.Title</title>
+    <title>@Model.CurrentPage.Name</title>
     <link href="~/static/css/bootstrap.min.css" rel="stylesheet" />
 </head>
 <body>
     <main>
         <div class="container">
-            @Html.Partial("~/Views/Shared/Header.cshtml")
+            @Html.Partial("~/Views/Shared/Header.cshtml", Model.MenuItems)
         </div>
         <div class="container">
             @RenderBody()

@@ -6,13 +6,12 @@ using System.Web;
 
 namespace Labb.Models.ViewModels
 {
-    public class StartPageViewModel
+    public class StartPageViewModel : DefaultPageViewModel<StartPage>
     {
-        public StartPage CurrentPage { get; set; }
         public string Greeting { get; set; }
-        public StartPageViewModel(StartPage currentPage)
+        public StartPageViewModel(StartPage currentPage) : base(currentPage)
         {
-            this.CurrentPage = currentPage;
+
         }
     }
 }

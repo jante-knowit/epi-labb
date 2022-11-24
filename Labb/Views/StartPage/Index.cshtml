@@ -1,10 +1,12 @@
-﻿@using EPiServer.Core
-@using EPiServer.Web.Mvc.Html
+﻿@using EPiServer.Web.Mvc.Html
 
 @model Labb.Models.ViewModels.StartPageViewModel
 
 <h1>@Html.PropertyFor(m => m.CurrentPage.Header) </h1>
+<h2>@Html.Raw(Model.Greeting)</h2>
 <div>
-  <h3>@Html.Raw(Model.Greeting)</h3>
   @Html.PropertyFor(m => m.CurrentPage.MainBody)
 </div> 
+<div>
+    @Html.PropertyFor(m => m.CurrentPage.Blocks)
+</div>
