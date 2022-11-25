@@ -1,12 +1,15 @@
 ﻿@using EPiServer.Web.Mvc.Html
 
 @model Labb.Models.ViewModels.StartPageViewModel
-
-<h1>@Html.PropertyFor(m => m.CurrentPage.Header) </h1>
-<h2>@Html.Raw(Model.Greeting)</h2>
-<div>
-  @Html.PropertyFor(m => m.CurrentPage.MainBody)
-</div> 
-<div>
-    @Html.PropertyFor(m => m.CurrentPage.Blocks)
+<div class="row">
+    <div class="col-md-8">
+        <h1>@Html.PropertyFor(m => m.CurrentPage.Header) </h1>
+        <h2>@Html.Raw(Model.Greeting)</h2>
+        <div>
+            @Html.PropertyFor(m => m.CurrentPage.MainBody)
+        </div>
+    </div>
+    <div class="col-md-4">        
+            @Html.PropertyFor(m => m.CurrentPage.Blocks)
+    </div>
 </div>
