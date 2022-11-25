@@ -242,7 +242,6 @@
     <Folder Include="Models\Media\" />
     <Folder Include="Models\Properties\" />
     <Folder Include="Static\" />
-    <Folder Include="Views\Shared\Blocks\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Web.config" />
